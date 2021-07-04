@@ -12,7 +12,6 @@ $passwordHash = password_hash($passwordDb, PASSWORD_DEFAULT);
 if (password_verify($password, $passwordHash) && $email == $emailDb) {
     $_SESSION['email'] = $email;
     header("Location:../dashboard.php");
-    
 }   else {
     $_SESSION['errorMessage'] = "Wrong email or password";
     header("Location:../index.php");
